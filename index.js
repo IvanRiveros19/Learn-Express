@@ -22,9 +22,9 @@ app.use(morgan('dev'));
     next();
 })*/
 
-app.get('/', (res, req) => {
+app.get('/', (req, res) => {
     const data = [{name : 'Juan'}, {name : 'Joel'}, {name : 'Cameron'}];
-    res.render('index.js', {people : data});
+    res.render('index.ejs', {people : data});
 })
 
 app.get('/user', (req, res) => {
